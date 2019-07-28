@@ -1,0 +1,255 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <br>
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-2">
+
+        <h2 class="my-4">인재 검색</h2>
+        <div class="list-group">
+            <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          지역별 검색
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item disabled" href="{% url 'people' %}">전체</a>
+                            <a class="dropdown-item" href="{% url 'seoul' %}">서울/경기</a>
+                            <a class="dropdown-item" href="#">강원</a>
+                            <a class="dropdown-item" href="#">경상</a>
+                            <a class="dropdown-item" href="#">충청</a>
+                            <a class="dropdown-item" href="#">전라</a>
+                            <a class="dropdown-item" href="{% url 'jeju' %}">제주</a>
+                          </div>
+            </div>
+            <br>
+            <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      직군별 검색
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">사무</a>
+                      <a class="dropdown-item" href="#">판매</a>
+                      <a class="dropdown-item" href="#">요리</a>
+
+                    </div>
+            </div>
+            <br>
+    </div>
+
+      </div>
+      <!-- /.col-lg-3 -->
+
+      <br>
+      <br>
+
+      <div class="col-lg-10" class="card-columns">
+
+        <div class="row">
+
+            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <img class="card-img-top" src="http://chosunilbousa.com/data/2017/11/entertainment/112117CD131CAD2E.jpg" alt="" width="50" height="150">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#" data-toggle="modal" data-target="#modal1" class="people-name">이선빈</a>
+                </h4>
+                <h5 class="people-region">서울/경기</h5>
+                <p class="card-text">이쁘죠?</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9734; &#9734;</small>
+              </div>
+            </div>
+            
+
+      
+      <!-- Modal -->
+      <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle" class="people-name">이선빈</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <img src="http://www.mediaus.co.kr/news/photo/201606/59843_131925_1237.gif" width="300" height="200"><br>
+                광수오빠 머시쪄용
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+              <button type="button" class="btn btn-primary">고백하기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+            </div>
+        
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                  <img class="card-img-top" src="https://pbs.twimg.com/media/DSYRwQsVwAEbNlu.png" alt="" width="50" height="150">
+                  <div class="card-body">
+                    <h4 class="card-title">
+                      <a href="#" data-toggle="modal" data-target="#modal2" class="people-name">Ryan</a>
+                    </h4>
+                    <h5 class="people-region">cacao</h5>
+                    <p class="card-text">어흥</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9733;</small>
+                  </div>
+                </div>
+                
+    
+          
+          <!-- Modal -->
+          <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle" class="people-name">Ryan</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <img scr="https://t1.daumcdn.net/cfile/tistory/99BFA23E5D0063281F">
+                    <br>
+                  어흥!
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                  <button type="button" class="btn btn-primary">채용하기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                      <a href="#"><img class="card-img-top" src="https://opgg-static.akamaized.net/images/medals/grandmaster_1.png" alt="" width="50" height="150"></a>
+                      <div class="card-body">
+                        <h4 class="card-title">
+                          <a href="#" data-toggle="modal" data-target="#modal3" class="people-name">홍태산</a>
+                        </h4>
+                        <h5 class="people-region">광주</h5>
+                        <p class="card-text"> 뽑아주세요 </p>
+                      </div>
+                      <div class="card-footer">
+                        <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                      </div>
+                    </div>
+                    
+        
+              
+              <!-- Modal -->
+              <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalCenterTitle" class="people-name">홍태산</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="">
+                     <br> 홍홍홍 홍홍홍 <br> 태산이가 갱을온다 호옹
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                      <button type="button" class="btn btn-primary">채용하기</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                          <img class="card-img-top" src="http://m.rhythmer.net/data/upload/board/5/45/645/9645/13366676087071.jpg" alt="" width="50" height="150">
+                          <div class="card-body">
+                            <h4 class="card-title">
+                              <a href="#" data-toggle="modal" data-target="#modal4" class="people-name">Allah dean</a>
+                            </h4>
+                            <h5 class="people-region">Lamp</h5>
+                            <p class="card-text">문질문해주세요!<br>모아라 드래곤볼</p>
+                          </div>
+                          <div class="card-footer">
+                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                          </div>
+                        </div>
+                        
+            
+                  
+                  <!-- Modal -->
+                  <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalCenterTitle" class="people-name">
+                                මගුල</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <img src="https://pbs.twimg.com/profile_images/903267893932056579/XN-Kq5cV.jpg" width="300">
+කුසගින්න සාදය
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            
+                         
+            </div>
+                           
+
+        </div>
+        <!-- /.row -->
+
+      </div>
+      <!-- /.col-lg-9 -->
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+  <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="{% url 'people2' %}" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="{% url 'people' %}">1</a></li>
+          <li class="page-item"><a class="page-link" href="{% url 'people2' %}">2</a></li>
+          <li class="page-item disabled"><a class="page-link" href="{% url 'people3' %}">3</a></li>
+          <li class="page-item disabled">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+  
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+{% endblock %}
+</html>

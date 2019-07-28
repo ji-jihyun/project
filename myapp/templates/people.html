@@ -1,0 +1,331 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <br>
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-2">
+
+        <h2 class="my-4">인재 검색</h2>
+        <div class="list-group">
+            <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          지역별 검색
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item disabled" href="{% url 'people' %}">전체</a>
+                          <a class="dropdown-item" href="{% url 'seoul' %}">서울/경기</a>
+                          <a class="dropdown-item" href="#">강원</a>
+                          <a class="dropdown-item" href="#">경상</a>
+                          <a class="dropdown-item" href="#">충청</a>
+                          <a class="dropdown-item" href="#">전라</a>
+                          <a class="dropdown-item" href="{% url 'jeju' %}">제주</a>
+                        </div>
+            </div>
+            <br>
+            <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      직군별 검색
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">사무</a>
+                      <a class="dropdown-item" href="#">판매</a>
+                      <a class="dropdown-item" href="#">요리</a>
+
+                    </div>
+            </div>
+            <br>
+    </div>
+
+      </div>
+      <!-- /.col-lg-3 -->
+
+      <br>
+      <br>
+
+      <div class="col-lg-10" class="card-columns">
+
+        <div class="row">
+
+            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <img class="card-img-top" src="http://chosunilbousa.com/data/2017/11/entertainment/112117CD131CAD2E.jpg" alt="" width="50" height="150">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#" data-toggle="modal" data-target="#modal1" class="people-name">이선빈</a>
+                </h4>
+                <h5 class="people-region">서울/경기</h5>
+                <p class="card-text">이쁘죠?</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9734; &#9734;</small>
+              </div>
+            </div>
+            
+
+      
+      <!-- Modal -->
+      <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">이선빈</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <img src="http://www.mediaus.co.kr/news/photo/201606/59843_131925_1237.gif" width="300" height="200"><br>
+                광수오빠 머시쪄용
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+              <button type="button" class="btn btn-primary">고백하기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+            </div>
+        
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                  <img class="card-img-top" src="https://pbs.twimg.com/media/DSYRwQsVwAEbNlu.png" alt="" width="50" height="150">
+                  <div class="card-body">
+                    <h4 class="card-title">
+                      <a href="#" data-toggle="modal" data-target="#modal2" class="people-name">Ryan</a>
+                    </h4>
+                    <h5 class="people-region">cacao</h5>
+                    <p class="card-text">어흥</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9733;</small>
+                  </div>
+                </div>
+                
+    
+          
+          <!-- Modal -->
+          <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">Ryan</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <img scr="https://t1.daumcdn.net/cfile/tistory/99BFA23E5D0063281F">
+                    <br>
+                  어흥!
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                  <button type="button" class="btn btn-primary">채용하기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                      <a href="#"><img class="card-img-top" src="https://opgg-static.akamaized.net/images/medals/grandmaster_1.png" alt="" width="50" height="150"></a>
+                      <div class="card-body">
+                        <h4 class="card-title">
+                          <a href="#" data-toggle="modal" data-target="#modal3" class="people-name">홍태산</a>
+                        </h4>
+                        <h5 class="people-region">광주</h5>
+                        <p class="card-text"> 뽑아주세요 </p>
+                      </div>
+                      <div class="card-footer">
+                        <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                      </div>
+                    </div>
+                    
+        
+              
+              <!-- Modal -->
+              <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalCenterTitle">홍태산</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="data:image/jpeg;base64,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">
+                     <br> 홍홍홍 홍홍홍 <br> 태산이가 갱을온다 호옹
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                      <button type="button" class="btn btn-primary">채용하기</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                          <img class="card-img-top" src="http://m.rhythmer.net/data/upload/board/5/45/645/9645/13366676087071.jpg" alt="" width="50" height="150">
+                          <div class="card-body">
+                            <h4 class="card-title">
+                              <a href="#" data-toggle="modal" data-target="#modal4" class="people-name">Allah dean</a>
+                            </h4>
+                            <h5 class="people-region">Lamp</h5>
+                            <p class="card-text">문질문해주세요!<br>모아라 드래곤볼</p>
+                          </div>
+                          <div class="card-footer">
+                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                          </div>
+                        </div>
+                        
+            
+                  
+                  <!-- Modal -->
+                  <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalCenterTitle">
+                                මගුල</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <img src="https://pbs.twimg.com/profile_images/903267893932056579/XN-Kq5cV.jpg" width="300">
+කුසගින්න සාදය
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                              <img class="card-img-top" src="https://s3-ap-northeast-2.amazonaws.com/hotopic/wp-content/uploads/2019/07/07200639/700000.jpg" alt="" width="50" height="150">
+                              <div class="card-body">
+                                <h4 class="card-title">
+                                  <a href="#" data-toggle="modal" data-target="#modal5" class="people-name">장성규</a>
+                                </h4>
+                                <h5 class="people-region">제주</h5>
+                                <p class="card-text">프로파트타임러</p>
+                              </div>
+                              <div class="card-footer">
+                                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                              </div>
+                            </div>
+                            
+                
+                      
+                      <!-- Modal -->
+                      <div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalCenterTitle">장성규</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              화장의 달인<br>
+                              <img src="http://blogfiles.naver.net/MjAxOTA3MTZfMjA5/MDAxNTYzMjQxODA5NjM3.DCc55lJba_wWnBx4K_7rp-T11Fpjf7IaTaBYHMCNfoog.se7Ave_AYVyZeMe1iVuceku9C5aRmTQcFujunZTMdQsg.PNG.waterdrop_we/image.png"  width="300" height="200">
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                      <div class="card h-100">
+                         <img class="card-img-top" src="https://t1.daumcdn.net/cfile/tistory/261E743A57CAC29414" alt="" width="50" height="150"></a>
+                          <div class="card-body">
+                                 <h4 class="card-title">
+                                   <a href="#" data-toggle="modal" data-target="#modal6" class="people-name">강철</a>
+                                 </h4>
+                                    <h5 class="people-region">협곡</h5>
+                                    <p class="card-text">만.찢.남</p>
+                                  </div>
+                                  <div class="card-footer">
+                                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                  </div>
+                                </div>
+                                
+                    
+                          
+                          <!-- Modal -->
+                          <div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalCenterTitle">Iron</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  3트째
+                                  <img src="https://opgg-static.akamaized.net/images/medals/iron_1.png">
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                  <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+            </div>
+                           
+
+        </div>
+        <!-- /.row -->
+
+      </div>
+      <!-- /.col-lg-9 -->
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+  <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+          <li class="page-item disabled"><a class="page-link" href="{% url 'people' %}">1</a></li>
+          <li class="page-item"><a class="page-link" href="{% url 'people2' %}">2</a></li>
+          <li class="page-item"><a class="page-link" href="{% url 'people3' %}">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+  
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+{% endblock %}
+</html>

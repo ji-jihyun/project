@@ -1,0 +1,190 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap&subset=korean" rel="stylesheet">
+  <style>
+    p.a{
+      font-family: 'Yeon Sung', cursive;
+      font-size: 50px;
+      margin: 0;
+    }
+
+    p.b{
+      font-family: 'Yeon Sung', cursive;
+      font-size: 30px;
+      margin: 0;
+    }
+
+    p.c{
+      font-family: 'Yeon Sung', cursive;
+      font-size: 25px;
+    }
+
+    h5.card-title{
+      font-family: 'Yeon Sung', cursive;
+      font-size: 25px;
+    }
+
+    p.card-text{
+      font-family: 'Yeon Sung', cursive;
+      font-size: 23px;
+    }
+
+    a.btn{
+      font-family: 'Yeon Sung', cursive;
+      font-size: 23px;
+    }
+
+    h4.home-title{
+      font-family: 'Yeon Sung', cursive;
+      font-size: 40px;
+    }
+
+    p.m-0{
+      font-family: 'Yeon Sung', cursive;
+      font-size: 20px;
+    }
+
+    h1.my-4{
+      font-family: 'Yeon Sung', cursive;
+      font-size: 50px;
+    }
+
+    h2.my-4{
+      font-family: 'Yeon Sung', cursive;
+      font-size: 40px;
+    }
+
+    a.list-group-item{
+      font-family: 'Yeon Sung', cursive;
+      font-size: 20px;
+    }
+
+    a.com-name{
+      font-family: 'Yeon Sung', cursive;
+      font-size: 35px;
+    }
+
+    button.btn{
+      font-family: 'Yeon Sung', cursive;
+      font-size: 20px;
+    }
+
+    a.dropdown-item{
+      font-family: 'Yeon Sung', cursive;
+      font-size: 20px;
+    }
+
+    h5.com-level{
+      font-family: 'Yeon Sung', cursive;
+      font-size: 30px;
+    }
+
+    a.people-name{
+      font-family: 'Yeon Sung', cursive;
+      font-size: 30px;
+    }
+
+    h5.people-region{
+      font-family: 'Yeon Sung', cursive;
+      font-size: 30px;
+    }
+  </style>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>위크루트</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/shop-homepage.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      {% if active %}
+      <a class="navbar-brand" href="{% url 'home' %}"><p class=a>위크루트</p></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          
+          {% if active == 'recruit' %}
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'recruit' %}"><p class=b>채용공고</p></a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'recruit' %}"><p class=b>채용공고</p></a>
+          </li>
+          {% endif %}
+          
+          {% if active == 'people' %}
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'people' %}"><p class=b>인재정보</p></a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'people' %}"><p class=b>인재정보</p></a>
+          </li>
+          {% endif %}
+          
+          {% if active == 'company' %}
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'company' %}"><p class=b>기업정보</p></a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'company' %}"><p class=b>기업정보</p></a>
+          </li>
+          {% endif %}
+
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+  </nav>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+      <!-- Footer -->
+  <footer class="py-5 bg-dark">
+        <div class="container">
+          <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+        </div>
+        <!-- /.container -->
+      </footer>
+</body>
+
+</html>

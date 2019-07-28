@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Content Row -->
+    <div class="row">
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <div class="card-body">
+            <a href="{% url 'companyinfo' %}"><img src = "http://www.brandtimes.co.kr/news/photo/201901/94_196_036.png" width ="200" height="72"></a>
+            <br><br>
+            <h6>SAMSUNG</h6>
+            <p>각 부문별 신입/경력 상시 채용"</p>
+            <kbd>연봉</kbd> 2400~5000만원<br>
+
+          </div>
+          <div class="card-footer">
+            <a class="btn btn-default" href="{% url 'companyinfo' %}" role="button">더 보기</a>
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <div class="card-body">
+              <a href="{% url 'companyinfo' %}"><img src = "https://img.insight.co.kr/static/2018/05/22/700/91939q9qbenssel3645j.jpg" width ="100" height="100"></a>
+              <br><br>
+              <h6>LG</h6>
+              <kbd>연봉</kbd> 2400~5000만원<br>
+              <p>각 부문별 신입/경력 상시 채용"</p>
+              
+          </div>
+          <div class="card-footer">
+            {% comment %} <a href="{% url 'companyinfo' %}" class="btn btn-primary btn-sm">More Info</a> {% endcomment %}
+            <a class="btn btn-default" href="{% url 'companyinfo' %}" role="button">더 보기</a>
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <div class="card-body">
+              <a href="{% url 'companyinfo' %}"><img src = "//img11.jobkorea.kr/Images/Logo/180/w/o/woowahan_180.gif?20190728194509" width ="200" height="72"></a>
+              <br><br>
+              <h6>배민</h6>
+              <kbd>연봉</kbd> 2400~5000만원<br>
+              <p>각 부문별 신입/경력 상시 채용"</p>
+          </div>
+          <div class="card-footer">
+            <a class="btn btn-default" href="{% url 'companyinfo' %}" role="button">더 보기</a>
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+
+    </div>
+    <!-- /.row -->
+    <!-- Content Row -->
+    <div class="row">
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <div class="card-body">
+
+            <a href="{% url 'companyinfo' %}"><img src = "data:image/png;base64,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" width ="200" height="72"></a>
+            <br><br>
+            <h6>SK</h6>
+            <kbd>연봉</kbd> 2400~5000만원<br>
+            <p>각 부문별 신입/경력 상시 채용"</p>
+          </div>
+          <div class="card-footer">
+            <a class="btn btn-default" href="{% url 'companyinfo' %}" role="button">더 보기</a>
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <div class="card-body">
+              <a href="{% url 'companyinfo' %}"><img src = "http://img.hani.co.kr/imgdb/resize/2016/0311/145756887946_20160311.JPG" width ="200" height="72"></a>
+              <br><br>
+              <h6>CJ</h6>
+              <kbd>연봉</kbd> 2400~5000만원<br>
+              <p>각 부문별 신입/경력 상시 채용"</p>
+          </div>
+          <div class="card-footer">
+            <a class="btn btn-default" href="{% url 'companyinfo' %}" role="button">더 보기</a>
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <div class="card-body">
+              <a href="{% url 'companyinfo' %}"><img src = "https://img11.jobkorea.kr/Images/Logo/180/a/u/autron_180.gif?20190728233509" width ="200" height="72"></a>
+              <br><br>
+              <h6>현대 오트론</h6>
+              <kbd>연봉</kbd> 2400~5000만원<br>
+              
+              <p>각 부문별 신입/경력 상시 채용"</p>
+          </div>
+          <div class="card-footer">
+            <a class="btn btn-default" href="{% url 'companyinfo' %}" role="button">더 보기</a>
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+      
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <div class="card-body">
+              <a href="{% url 'companyinfo' %}"><img src = "https://img11.jobkorea.kr/Images/Logo/180/n/t/NTS0401_180.gif?20190729002009" width ="200" height="72"></a>
+              <br><br>
+              <h6>네이버 서비스</h6>
+              <kbd>연봉</kbd> 2400~5000만원<br>
+              <p>각 부문별 신입/경력 상시 채용"</p>
+          </div>
+          <div class="card-footer">
+            <a class="btn btn-default" href="{% url 'companyinfo' %}" role="button">더 보기</a>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <div class="card-body">
+              <a href="{% url 'companyinfo' %}"><img src = "https://news.imaeil.com/inc/photos/2018/11/24/2018112413200072898_l.jpg" width ="200" height="72"></a>
+              <br><br>
+              <h6>KT</h6>
+              <kbd>연봉</kbd> 2400~5000만원<br>
+              <p>각 부문별 신입/경력 상시 채용"</p>
+          </div>
+          <div class="card-footer">
+            <a class="btn btn-default" href="{% url 'companyinfo' %}" role="button">더 보기</a>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <div class="card-body">
+              <a href="{% url 'companyinfo' %}"><img src = "https://img11.jobkorea.kr/Images/Logo/180/c/o/coupang_180.gif?20190728233509" width ="200" height="72"></a>
+              <br><br>
+              <h6>쿠팡</h6>
+              <kbd>연봉</kbd> 2400~5000만원<br>
+              <p>각 부문별 신입/경력 상시 채용"</p>
+          </div>
+          <div class="card-footer">
+            <a class="btn btn-default" href="{% url 'companyinfo' %}" role="button">더 보기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
+
+ 
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+{% endblock %}
